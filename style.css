@@ -1,0 +1,73 @@
+html{
+  margin: 0px 0px;
+  padding: 0px 0px;
+
+  font-family: 'Roboto', sans-serif;
+  overflow: hidden;
+}
+
+body{
+  margin: 0px 0px;
+  padding: 0px 0px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.background{
+  position:absolute;
+
+  width: 150%;
+  height: 150%;
+
+  top: -100px;
+  left: -100px;
+
+  z-index: -1;
+
+  background: url('./assets/img/background.png') center no-repeat;
+  background-size: cover;
+
+  -webkit-filter: blur(50px);
+  -moz-filter: blur(50px);
+  -o-filter: blur(50px);
+  -ms-filter: blur(50px);
+  filter: blur(50px);
+}
+
+.center {
+  margin: 0px auto;
+  text-align: center;
+}
+
+.glass {
+  height: 300px;
+  width: 420px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.circle {
+  border-radius: 360px;
+}
+
+.avatar {
+  width: 140px;
+  height: 140px;
+  margin-top: 260px;
+  margin-bottom: 20px;
+
+  background: url('https://cdn.discordapp.com/avatars/121919449996460033/a_ef33d5ab9bdf27bcc64ea2046f934ade.gif') center no-repeat;
+  background-size: cover;
+
+  box-shadow: 1px 1px 25px 1px #000000;
+}
+
+.links{
+  margin-top: 10px;
+}
+
+#h1 {
+  margin: 10px 10px;
+  color: #AAAAAA;
+}
