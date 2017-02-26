@@ -1,3 +1,9 @@
+@keyframes example {
+    0%   {left:-900px;;}
+    50%  {left: 100px; }
+    100% {left:-900px;}
+}
+
 html {
   margin: 0px;
   padding: 0px;
@@ -24,13 +30,21 @@ body {
   top: -100px;
   left: -100px;
   z-index: -1;
-  background: url('/assets/img/background.png') center no-repeat;
+
+  animation-name: example;
+  animation-timing-function:linear;
+  animation-duration: 64s;
+  animation-iteration-count: infinite;
+
+  background: url('./assets/img/background.jpg') center no-repeat;
   background-size: cover;
-  -webkit-filter: blur(50px);
-     -moz-filter: blur(50px);
-      -ms-filter: blur(50px);
-       -o-filter: blur(50px);
-          filter: blur(50px);
+  -webkit-filter: blur(10px);
+     -moz-filter: blur(10px);
+      -ms-filter: blur(10px);
+       -o-filter: blur(10px);
+          filter: blur(10px);
+
+
 }
 
 .glass {
@@ -40,9 +54,14 @@ body {
   align-items: center;
   width: 420px; /* dude weed lmao */
   height: auto; /* height determined from content */
-  background-color: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
+  transition: 0.2s;
   padding: 30px; /* multiples of 3 are nice */
+}
+
+.glass:hover{
+  background-color: rgba(0,0,0,0.6);
 }
 
 .glass a { /* "a" elements INSIDE of .glass only */
@@ -67,21 +86,21 @@ body {
   width: inherit;
   height: inherit;
   transition: 0.5s; /* time for full rotate */
+  border-radius: 50%; /* as long as image aspect ratio is 1:1, 50% will always give a circle; */
 }
 
-.avatar img:hover { /* cuz why not */
-/* if image was in same div as the shadow, the shadow would rotate too */
-/* it'd look weird */
-  -webkit-transform: rotate(360deg);
-          transform: rotate(360deg);
+.links {
+  cursor: pointer;
 }
 
 .links a {
   padding: 10px;
   margin: 0 3px;
   transition: 0.2s;
+  font-size: 16;
 }
 
 .links a:hover {
   background-color: rgba(0,0,0,0.2);
+  font-size: 22;
 }
