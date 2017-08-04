@@ -83,13 +83,16 @@ body {
 }
 
 .links a {
+  display: inline-block;
   padding: 10px;
   margin: 0 3px;
-  transition: 0.2s;
+  transition: all 0.2s;
   font-size: 16;
 }
 
 .links a:hover {
   background-color: rgba(0,0,0,0.2);
-  font-size: 22;
+  -ms-transform: scale(1.2); 
+  -webkit-transform: scale(1.2);
+  transform: scale(1.2);
 }
