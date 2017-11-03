@@ -1,29 +1,41 @@
 html {
   margin: 0px;
   padding: 0px;
-  font-family: 'Roboto', sans-serif;
-  overflow: hidden;
+  font-family: 'Quicksand', sans-serif;
 }
 
 /* make padding and margin part of width/height */
 * { box-sizing: border-box; }
 
 body {
+	margin: 0px;
+	padding: 0px;
+}
+
+.container {
   margin: 0px;
   padding: 0px;
-  height: 100vh; /* make body 100 vertical units height, i.e. screen height */
+  height: 100vh;
   display: flex; /* no hacks, no translate 50%, just good css */
-  justify-content: center; /* center horizontally */
-  align-items: center; /* center vertically */
+}
+
+.center-h
+{
+	justify-content: center; /* center horizontally */
+}
+
+.center-v
+{
+	align-items: center; /* center vertically */
 }
 
 
 @media (max-width: 2560) {
-    
+
 }
 
 
-.background {
+.landing {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -31,27 +43,56 @@ body {
 
   background: url('./assets/img/background.jpg') center no-repeat;
   background-size: cover;
-  -webkit-filter: blur(10px);
-     -moz-filter: blur(10px);
-      -ms-filter: blur(10px);
-       -o-filter: blur(10px);
-          filter: blur(10px);
+  background-color: black;
+}
 
+.miki {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	z-index: -1;
 
+	background: url('./assets/img/miki.jpg') center no-repeat;
+	background-size: cover;
+	background-color: black;
+}
+
+.down {
+	border-radius: 50%;
 }
 
 .glass {
   display: flex;
   flex-direction: column; /* flows down, instead of across */
-  justify-content: center;
   align-items: center;
-  width: 420px; /* dude weed lmao */
-  height: auto; /* height determined from content */
   background-color: rgba(0, 0, 0, 0.4);
   color: #fff;
   transition: 0.2s;
   padding: 30px; /* multiples of 3 are nice */
 }
+
+.glass2 {
+	display: flex;
+   align-items: center;
+   background-color: rgba(0, 0, 0, 0.4);
+   color: #fff;
+   transition: 0.2s;
+   padding: 30px; /* multiples of 3 are nice */
+}
+
+.glass2:hover{
+  background-color: rgba(0,0,0,0.6);
+}
+
+.glass2 a { /* "a" elements INSIDE of .glass only */
+  text-decoration: none;
+  color: #fff;
+}
+
+.glass2 h1 {
+  margin: 0 0 15px 0;
+}
+
 
 .glass:hover{
   background-color: rgba(0,0,0,0.6);
@@ -90,6 +131,10 @@ body {
     .links a {
         display: block;
         font-size: 24px;
+		  border-bottom: 0px solid #000;
+		  border-left: 0px solid #000;
+		  border-right: 0px solid #000;
+
     }
     .links a:hover {
         border-left: 2px solid #FFF;
@@ -108,14 +153,7 @@ body {
 .links a {
   padding: 10px;
   margin: 0 3px;
-  transition: all 0.2s;
+  transition: all 0.3s;
   font-size: 16;
-  text-transform: capitalize
-}
-
-.links a:hover {
-  background-color: rgba(0,0,0,0.2);
-  -ms-transform: scale(1.2); 
-  -webkit-transform: scale(1.2);
-  transform: scale(1.2);
+  text-transform: capitalize;
 }

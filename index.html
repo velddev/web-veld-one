@@ -1,25 +1,73 @@
 <html>
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Velds gay homepage">
-    <meta name="author" content="Veldy">
+    <meta name="description" content="Veld.ONE">
+    <meta name="author" content="M. Veldsink">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+	 <link href="https://fonts.googleapis.com/css?family=Quicksand" rel="stylesheet">
+	 	<script src="https://use.fontawesome.com/3cf114408e.js"></script>
+	 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
   </head>
   <body>
-    <div class="background"></div>
-    <div class="glass">
-      <div class="avatar">
-        <img src="./assets/img/veldatar.png">
-      </div>
-        <h1>Veld</h1>
-        <div class="links">
-            <a href="https://www.discord.gg/veUGD9t"> discord </a><span> | </span>
-            <a href="https://www.patreon.com/mikibot"> patreon </a><span> | </span>
-            <a href="https://www.github.com/velddev"> github </a><span> | </span>
-            <a href="https://www.youtube.com/channel/UC8SuQEp4_invozS5hDssA9Q"> YouTube </a>
-        </div>
-    </div>
+	  <div id="page0" class="container center-h center-v">
+	    <div class="landing"></div>
+	    <div class="glass">
+	      <div class="avatar">
+	        <img src="./assets/img/veldatar.png">
+	      </div>
+	        <h1>VELD</h1>
+	        <div class="links">
+	            <a href="https://www.discord.gg/veUGD9t"> discord </a><span> | </span>
+	            <a href="https://www.patreon.com/mikibot"> patreon </a><span> | </span>
+	            <a href="https://www.github.com/velddev"> github </a><span> | </span>
+	            <a href="https://www.youtube.com/channel/UC8SuQEp4_invozS5hDssA9Q"> YouTube </a>
+	        </div>
+		  </div>
+		  <div class="glass down">
+			  <i class="fa fa-chevron-down" aria-hidden="true"></i>
+		  </div>
+	  </div>
+	  <div id="page1" class="container center-v center-h">
+	  <div class="miki"></div>
+	  <div class="avatar">
+		 <img src="./assets/img/mikiavatar.png">
+	  </div>
+	  <div class="glass2">
+			<h1>MIKI</h1>
+			<div class="links">
+				 <a href="https://www.discord.gg/veUGD9t"> discord </a><span> | </span>
+				 <a href="https://www.github.com/Mikibot"> github </a><span> | </span>
+				 <a href="https://www.patreon.com/mikibot"> patreon </a><span> | </span>
+				 <a href="https://www.miki.ai"> Website </a>
+			</div>
+	   </div>
+	</div>
   </body>
 </html>
+<script>
+	var currentHeight = 0;
+	var maxPages = 1;
+	var lastKnownScrollHeight = window.scrollY;
+	var isAnimating = false;
+	$(window).scroll(function() {
+		if(!isAnimating)
+		{
+			console.log("from:" + currentHeight);
+			isAnimating = true;
+			if(window.scrollY >= lastKnownScrollHeight)
+			{
+				currentHeight++;
+			}
+			else {
+				currentHeight--;
+			}
+			console.log("to  :" + currentHeight);
+			$('html, body').animate({
+				scrollTop: $("#page" + currentHeight).offset().top
+			}, {easing: 'swing', duration: 666}, function() {
+				isAnimating = false;
+			});
+		}
+	});
+</script>
