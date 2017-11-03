@@ -17,6 +17,7 @@ body {
   padding: 0px;
   height: 100vh;
   display: flex; /* no hacks, no translate 50%, just good css */
+  flex-direction: column;
 }
 
 .center-h
@@ -28,7 +29,6 @@ body {
 {
 	align-items: center; /* center vertically */
 }
-
 
 @media (max-width: 2560) {
 
@@ -70,29 +70,6 @@ body {
   transition: 0.2s;
   padding: 30px; /* multiples of 3 are nice */
 }
-
-.glass2 {
-	display: flex;
-   align-items: center;
-   background-color: rgba(0, 0, 0, 0.4);
-   color: #fff;
-   transition: 0.2s;
-   padding: 30px; /* multiples of 3 are nice */
-}
-
-.glass2:hover{
-  background-color: rgba(0,0,0,0.6);
-}
-
-.glass2 a { /* "a" elements INSIDE of .glass only */
-  text-decoration: none;
-  color: #fff;
-}
-
-.glass2 h1 {
-  margin: 0 0 15px 0;
-}
-
 
 .glass:hover{
   background-color: rgba(0,0,0,0.6);
